@@ -25,6 +25,15 @@ export const Photos = () => (
     </Card.Content>
   </Card>
 )
+export const Pokemon = () => (
+  <Card fluid>
+    <Card.Content textAlign="center">
+      <h2>ERROR 404 NOT FOUND!!!!</h2>
+      <Image src='http://68.media.tumblr.com/94ff805c4ccd786c3ae480b78609b70a/tumblr_obu9exPD1J1s13tcmo1_1280.gif'/>
+    </Card.Content>
+  </Card>
+)
+
 
 
 export const Cocktails = () => {
@@ -49,49 +58,49 @@ export const Cocktails = () => {
 }
 
 
-export class Pokemon extends React.Component {
+// export class Pokemon extends React.Component {
+//
+//   state = {
+//     pokemon: null
+//   }
+//
+//   getRandomPokemon = () => {
+//     const pokeId = Math.round(Math.random()*15)
+//     fetch(`https://pokeapi.co/api/v2/pokemon/${pokeId}`)
+//       .then(res => res.json())
+//       .then(pokemon => this.setState({pokemon: pokemon}))
+//   }
+//
+//   componentDidMount() {
+//     this.getRandomPokemon()
+//   }
+//
+//   determineContent = () => {
+//     if (this.state.pokemon) {
+//       return (
+//         <div>
+//           <h3>{this.state.pokemon.name}</h3>
+//           <Image src={this.state.pokemon.sprites.front_default}/>
+//           <br/>
+//           <Button onClick={this.getRandomPokemon}>Get New Pokemon</Button>
+//         </div>
+//       )
+//     }
+//     return (
+//       <div style={{height: 300}}>
+//         <Loader active size='large'>Loading</Loader>
+//       </div>
+//     )
+//   }
+  //
+  // render() {
+  //   return (
+  //     <Card fluid>
+  //       <Card.Content textAlign="center">
+  //         {this.determineContent()}
+  //       </Card.Content>
+  //     </Card>
+  //   )
+  // }
 
-  state = {
-    pokemon: null
-  }
-
-  getRandomPokemon = () => {
-    const pokeId = Math.round(Math.random()*802)
-    fetch(`https://pokeapi.co/api/v2/pokemon/${pokeId}`)
-      .then(res => res.json())
-      .then(pokemon => this.setState({pokemon: pokemon}))
-  }
-
-  componentDidMount() {
-    this.getRandomPokemon()
-  }
-
-  determineContent = () => {
-    if (this.state.pokemon) {
-      return (
-        <div>
-          <h3>{this.state.pokemon.name}</h3>
-          <Image src={this.state.pokemon.sprites.front_default}/>
-          <br/>
-          <Button onClick={this.getRandomPokemon}>Get New Pokemon</Button>
-        </div>
-      )
-    }
-    return (
-      <div style={{height: 300}}>
-        <Loader active size='large'>Loading</Loader>
-      </div>
-    )
-  }
-
-  render() {
-    return (
-      <Card fluid>
-        <Card.Content textAlign="center">
-          {this.determineContent()}
-        </Card.Content>
-      </Card>
-    )
-  }
-
-}
+// }
